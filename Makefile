@@ -45,7 +45,7 @@ params:
 		--resource-group $(STORAGE_GROUP) \
     	--account-name $(STORAGE_ACCOUNT_NAME) \
 		--query "[0].value" | tr -d '"'))
-	@mkdir parameters 2> /dev/null; STORAGE_ACCOUNT_KEY=$(STORAGE_ACCOUNT_KEY) python genparams.py > parameters/cluster.json
+	@mkdir parameters 2> /dev/null; STORAGE_ACCOUNT_KEY=$(STORAGE_ACCOUNT_KEY) python3 genparams.py > parameters/cluster.json
 
 # Cleanup parameters
 clean:
