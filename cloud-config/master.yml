@@ -90,7 +90,7 @@ packages:
   - python-bottle
 
 runcmd:
-  - usermod -G docker cluster
+  - usermod -G docker ${ADMIN_USERNAME}
   - systemctl enable docker
   - systemctl start docker
   - systemctl enable swarm-helper

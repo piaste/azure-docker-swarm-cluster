@@ -77,7 +77,7 @@ packages:
   #- curl
 
 runcmd:
-  - usermod -G docker cluster
+  - usermod -G docker ${ADMIN_USERNAME}
   - systemctl enable docker
   - systemctl enable swarm-join
   - systemctl enable swarm-leave
